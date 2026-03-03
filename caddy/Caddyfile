@@ -1,0 +1,11 @@
+{$BASE_URL:localhost} {
+    # use handle_path to automatically strip the /api prefix
+    handle_path /server/api/* {
+        reverse_proxy doable-api:8080
+    }
+
+    # everything else is frontend
+    handle_path /* {
+        reverse_proxy doable-frontend:3000
+    }
+}

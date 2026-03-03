@@ -1,0 +1,22 @@
+name: doable
+
+services:
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    image: ghcr.io/sirnacou/doable/frontend:latest
+    expose:
+      - 3000
+
+  api:
+    build:
+      context: ./server/Api
+      dockerfile: Dockerfile
+    image: ghcr.io/sirnacou/doable/server/api:latest
+    expose:
+      - 8080
+
+volumes:
+  caddy_data:
+  caddy_config:

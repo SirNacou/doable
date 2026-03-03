@@ -7,9 +7,9 @@ EXPOSE 8081
 FROM mcr.microsoft.com/dotnet/sdk:10.0 AS build
 ARG BUILD_CONFIGURATION=Release
 WORKDIR /src
-COPY ["server/Api/Api.csproj", "server/Api/"]
+COPY ["Api.csproj", "server/Api/"]
 RUN dotnet restore "server/Api/Api.csproj"
-COPY . .
+COPY . server/Api/
 WORKDIR "/src/server/Api"
 RUN dotnet build "./Api.csproj" -c $BUILD_CONFIGURATION -o /app/build
 

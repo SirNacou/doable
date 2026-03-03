@@ -1,0 +1,39 @@
+name: doable
+
+services:
+  caddy:
+    hostname: doable-caddy
+    image: caddy:latest
+    ports:
+      - "80:80"
+      - "443:443"
+      - "443:443/udp"
+    env_file:
+      - config.env
+      - secrets.env
+    volumes:
+      - ./caddy:/etc/caddy
+      - caddy_data:/data
+      - caddy_config:/config
+
+  frontend:
+    hostname: doable-frontend
+    image: ghcr.io/sirnacou/doable/frontend:latest
+    expose:
+      - 3000
+    env_file:
+      - config.env
+      - secrets.env
+
+  api:
+    hostname: doable-api
+    image: ghcr.io/sirnacou/doable/server/api:latest
+    expose:
+      - 8080
+    env_file:
+      - config.env
+      - secrets.env
+
+volumes:
+  caddy_data:
+  caddy_config:

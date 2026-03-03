@@ -1,0 +1,129 @@
+# Environment variables
+.env
+.env.local
+.env.*.local
+*.env
+secrets.env
+config.env
+
+# Node dependencies (Frontend)
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+bun.lockb
+
+# Build outputs
+dist/
+build/
+out/
+.next/
+.nuxt/
+coverage/
+.coverage/
+
+# .NET / C# (Backend)
+## Folders
+bin/
+obj/
+.vs/
+.vscode/
+packages/
+.packages/
+.nuget/
+publish/
+
+## Files
+*.user
+*.suo
+*.sln.iml
+*.nupkg
+*.snupkg
+*.vshost.exe
+*.vshost.exe.config
+*.dbmdl
+*.jfm
+*.pfx
+*.publishsettings
+PublishScripts/
+*.trx
+
+## Visual Studio
+.vscode/
+.idea/
+.vs/
+.vscode-remote/
+
+# IDE and Editor
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+*.sublime-workspace
+*.sublime-project
+.project
+.classpath
+.settings/
+*.code-workspace
+
+# Testing
+.nyc_output/
+*.lcov
+junit.xml
+test-results/
+TestResults/
+
+# Logs
+logs/
+*.log
+
+# Runtime data
+tmp/
+temp/
+cache/
+
+# OS specific
+.DS_Store
+Thumbs.db
+.directory
+
+# Package managers
+.pnp
+.pnp.js
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# Development
+.env.development
+.env.test
+.env.production
+
+# TypeScript
+*.tsbuildinfo
+
+# Vite
+.vite/
+
+# Docker
+.dockerignore
+
+# Local development
+.turbo/
+.cache/
+
+# IDE workspace settings
+.workspace/
+
+# Misc
+.vscode/settings.json
+.env.local.example
+
+# ReSharper
+.idea/
+*.resharper
+*.resharper.user
+_ReSharper*/
